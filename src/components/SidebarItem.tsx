@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import { FiArrowUpRight } from 'react-icons/fi';
+import Link from "next/link";
+import { FiArrowUpRight } from "react-icons/fi";
 
 interface SidebarItemProps {
   href: string;
@@ -17,18 +17,18 @@ export default function SidebarItem({
   showArrow = false,
 }: SidebarItemProps) {
   return (
-    <li>
+    <li className="group">
       <Link
-        className={`flex items-center rounded-md py-1 px-2 hover:bg-black ${
-          isActive ? 'bg-gray-400' : ''
+        className={`hover-primary flex items-center rounded-md px-2 py-1.5 font-medium ${
+          isActive ? "bg-primary" : ""
         }`}
         href={href}
       >
-        <div className='flex items-center'>
+        <div className="flex items-center">
           <IconComponent />
-          <span style={{ marginLeft: '8px' }}>{title}</span>
+          <span style={{ marginLeft: "8px" }}>{title}</span>
         </div>
-        {showArrow && <FiArrowUpRight className='ml-auto' />}
+        {showArrow && <FiArrowUpRight className="ml-auto" />}
       </Link>
     </li>
   );

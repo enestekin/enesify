@@ -21,7 +21,9 @@ export default function SidebarSection({
 }: SidebarSectionProps) {
   return (
     <div className="mt-6">
-      {!isCollapsed && title && <h4 className="px-4 text-xs">{title}</h4>}
+      {!isCollapsed && title && (
+        <h4 className="px-4 text-xs font-bold">{title}</h4>
+      )}
       <ul className="mt-2 text-sm">
         {links.map((item) => (
           <SidebarItem

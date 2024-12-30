@@ -55,6 +55,9 @@
   .hover-primary {
     @apply hover:bg-black hover:text-white dark:hover:bg-gray-600;
   }
+  .hover-secondary {
+    @apply hover:text-black dark:hover:text-white;
+  }
   .hover-sidebar-item {
     @apply hover:bg-gray-200 hover:text-black dark:hover:bg-gray-800 dark:hover:text-white;
   }

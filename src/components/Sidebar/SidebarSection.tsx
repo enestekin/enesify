@@ -8,6 +8,7 @@ interface SidebarSectionProps {
     icon: React.ComponentType<{ size?: number }>;
   }[];
   pathname: string;
+  isCollapsed?: boolean;
   showArrow?: boolean;
 }
 
@@ -15,11 +16,12 @@ export default function SidebarSection({
   title,
   links,
   pathname,
+  isCollapsed = false,
   showArrow = false,
 }: SidebarSectionProps) {
   return (
     <div className="mt-6">
-      {title && <h4 className="px-4 text-xs">{title}</h4>}
+      {!isCollapsed && title && <h4 className="px-4 text-xs">{title}</h4>}
       <ul className="mt-2 text-sm">
         {links.map((item) => (
           <SidebarItem
@@ -28,7 +30,8 @@ export default function SidebarSection({
             href={item.href}
             Icon={item.icon}
             isActive={pathname === item.href}
-            showArrow={showArrow}
+            showArrow={showArrow && !isCollapsed}
+            isCollapsed={isCollapsed}
           />
         ))}
       </ul>

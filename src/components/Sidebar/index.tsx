@@ -1,28 +1,62 @@
 "use client";
 
-import { PanelRightOpen } from "lucide-react";
+import { useState } from "react";
+import { PanelRightOpen, PanelLeftOpen } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { HOME_LINKS, ME_LINKS, SOCIAL_LINKS } from "@/constants/navbar-links";
 import SidebarSection from "./SidebarSection";
 
 export default function Sidebar() {
+  const [isCollapsed, setIsCollapsed] = useState(false);
   const pathname = usePathname();
 
+  const toggleSidebar = () => setIsCollapsed(!isCollapsed);
+
   return (
-    <aside className="border-secondary text-secondary h-full min-h-screen w-52 border-r font-medium">
+    <aside
+      className={`border-secondary text-secondary h-full min-h-screen duration-300 ease-in-out ${
+        isCollapsed ? "w-9" : "w-52"
+      } border-r font-medium`}
+    >
       <nav>
-        <div className="flex h-12 items-center justify-between px-4">
-          <h1 className="text-primary font-bold">Enes Tekin</h1>
-          <PanelRightOpen />
+        <div
+          className={`flex h-12 items-center justify-between ${isCollapsed ? "px-2" : "px-4"}`}
+        >
+          {!isCollapsed && (
+            <h1 className="text-primary w-auto whitespace-nowrap font-bold transition-all">
+              Enes Tekin
+            </h1>
+          )}
+          <button
+            onClick={toggleSidebar}
+            className="cursor hover-secondary flex items-center justify-center"
+          >
+            {isCollapsed ? (
+              <PanelLeftOpen size={16} />
+            ) : (
+              <PanelRightOpen size={16} />
+            )}
+          </button>
         </div>
 
-        <SidebarSection links={HOME_LINKS} pathname={pathname} />
-        <SidebarSection title="Me" links={ME_LINKS} pathname={pathname} />
+        <SidebarSection
+          title=""
+          links={HOME_LINKS}
+          pathname={pathname}
+          isCollapsed={isCollapsed}
+        />
+        <SidebarSection
+          title="Me"
+          links={ME_LINKS}
+          pathname={pathname}
+          isCollapsed={isCollapsed}
+        />
         <SidebarSection
           title="Social"
           links={SOCIAL_LINKS}
           pathname={pathname}
-          showArrow
+          isCollapsed={isCollapsed}
+          showArrow={!isCollapsed}
         />
       </nav>
     </aside>

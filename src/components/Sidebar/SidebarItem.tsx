@@ -22,19 +22,23 @@ export default function SidebarItem({
     <li>
       <Link
         href={href}
-        className={`hover-sidebar-item flex h-7 items-center ${
+        className={`hover-sidebar-item flex h-7 cursor-pointer items-center ${
           isActive ? "bg-sidebar-item text-primary" : ""
         }`}
       >
         <span className={`${isCollapsed ? "px-2" : "px-4"}`}>
           <Icon size={16} />
         </span>
-        {!isCollapsed && (
-          <div className="flex w-full items-center justify-between pr-4">
-            {title}
-            {showArrow && <ArrowUpRight size={16} />}
-          </div>
-        )}
+        <div
+          className={`flex w-full items-center justify-between pr-4 ${
+            isCollapsed
+              ? "opacity-0 delay-0" // Sidebar kapalıyken hemen kaybolur
+              : "opacity-100 transition-opacity delay-150 duration-300" // Açılırken gecikmeli görünür
+          }`}
+        >
+          <span className="whitespace-nowrap">{title}</span>
+          {showArrow && <ArrowUpRight size={16} />}
+        </div>
       </Link>
     </li>
   );

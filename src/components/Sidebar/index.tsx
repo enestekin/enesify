@@ -14,7 +14,7 @@ export default function Sidebar() {
 
   return (
     <aside
-      className={`border-secondary text-secondary h-full min-h-screen duration-300 ease-in-out ${
+      className={`border-secondary text-secondary h-full min-h-screen duration-500 ease-in-out ${
         isCollapsed ? "w-9" : "w-52"
       } border-r font-medium`}
     >
@@ -23,13 +23,13 @@ export default function Sidebar() {
           className={`flex h-12 items-center justify-between ${isCollapsed ? "px-2" : "px-4"}`}
         >
           {!isCollapsed && (
-            <h1 className="text-primary w-auto whitespace-nowrap font-bold transition-all">
+            <h1 className="text-primary w-auto whitespace-nowrap font-bold">
               Enes Tekin
             </h1>
           )}
           <button
             onClick={toggleSidebar}
-            className="cursor hover-secondary flex items-center justify-center"
+            className="hover-secondary flex cursor-pointer items-center justify-center"
           >
             {isCollapsed ? (
               <PanelLeftOpen size={16} />

@@ -22,7 +22,7 @@ export default function SidebarSection({
   return (
     <div className="mt-6">
       {!isCollapsed && title && (
-        <h4 className="px-4 text-xs font-bold">{title}</h4>
+        <h4 className="px-2 text-xs font-bold">{title}</h4>
       )}
       <ul className="mt-2 text-sm">
         {links.map((item) => (

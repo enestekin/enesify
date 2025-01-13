@@ -26,14 +26,14 @@ export default function SidebarItem({
           isActive ? "bg-sidebar-item text-primary" : ""
         }`}
       >
-        <span className={`${isCollapsed ? "px-2" : "px-4"}`}>
+        <span className="px-2">
           <Icon size={16} />
         </span>
         <div
           className={`flex w-full items-center justify-between pr-4 ${
             isCollapsed
-              ? "opacity-0 delay-0" // Sidebar kapalıyken hemen kaybolur
-              : "opacity-100 transition-opacity delay-150 duration-300" // Açılırken gecikmeli görünür
+              ? "opacity-0 delay-0"
+              : "opacity-100 transition-opacity delay-150 duration-300"
           }`}
         >
           <span className="whitespace-nowrap">{title}</span>

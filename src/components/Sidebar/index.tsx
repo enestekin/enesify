@@ -19,9 +19,7 @@ export default function Sidebar() {
       } border-r font-medium`}
     >
       <nav>
-        <div
-          className={`flex h-12 items-center justify-between ${isCollapsed ? "px-2" : "px-4"}`}
-        >
+        <div className="flex h-12 items-center justify-between px-2">
           {!isCollapsed && (
             <h1 className="text-primary w-auto whitespace-nowrap font-bold">
               Enes Tekin

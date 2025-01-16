@@ -19,7 +19,7 @@ export default function ToggleTheme() {
   return (
     <div className="px-2">
       <button
-        className="border-secondary hover:border-primary focus:border-primary rounded-full border p-1.5"
+        className="border-secondary hover:border-primary focus:border-primary rounded-full border"
         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       >
         {theme === "dark" ? (

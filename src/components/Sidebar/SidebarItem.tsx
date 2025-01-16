@@ -22,17 +22,17 @@ export default function SidebarItem({
     <li>
       <Link
         href={href}
-        className={`hover-sidebar-item flex h-7 cursor-pointer items-center ${
+        className={`hover-sidebar-item flex h-7 cursor-pointer items-center rounded-md px-2 ${
           isActive ? "bg-sidebar-item text-primary" : ""
         }`}
       >
-        <span className="px-2">
+        <span className="text-secondary mr-2">
           <Icon size={16} />
         </span>
         <div
-          className={`flex w-full items-center justify-between pr-4 ${
+          className={`text-primary flex w-full items-center justify-between pr-4 ${
             isCollapsed
-              ? "opacity-0 delay-0"
+              ? "invisible opacity-0 delay-0"
               : "opacity-100 transition-opacity delay-150 duration-300"
           }`}
         >

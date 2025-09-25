@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="container">
-      <section className="md:-24 mx-auto max-w-screen-md py-16 md:text-center lg:py-48">
+      <section className="mx-auto max-w-screen-md py-16 md:py-24 md:text-center lg:py-48">
         <header>
           <h1 className="mb-8 text-4xl font-black md:text-6xl">
             Hey, I&apos;m <span className="text-primary">Enes Tekin</span>

@@ -21,7 +21,6 @@ const postsPath = path.join(process.cwd(), "content/blog");
 export async function getPostBySlug(slug: string) {
   const safeSlug = slug.replace(/\.mdx$/, "");
   const filePath = path.join(postsPath, `${safeSlug}.mdx`);
-  console.log("slug", slug);
   const source = fs.readFileSync(filePath, "utf8");
 
   const { content, data } = matter(source);

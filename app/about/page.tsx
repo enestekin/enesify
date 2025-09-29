@@ -1,17 +1,13 @@
-import Link from "next/link";
-
 export default function AboutPage() {
   return (
-    <section className="container text-neutral-400">
-      <div className="pb-16 md:mx-[10vw]">
+    <section className="mx-auto max-w-4xl px-4 py-16 text-neutral-400">
+      <div>
         <div>
-          <header className="py-16">
+          <header className="mb-10 font-bold">
             <h1 className="text-3xl text-white md:text-5xl">
               Hey, I&apos;m Enes Tekin
             </h1>
-            <p className="mt-2 text-2xl font-medium text-neutral-400">
-              Software Engineer
-            </p>
+            <p className="mt-2 text-2xl text-neutral-400">Software Engineer</p>
           </header>
           <div className="text-lg">
             <p className="leading-7">
@@ -96,46 +92,6 @@ export default function AboutPage() {
               </p>
             </li>
           </ul>
-        </div>
-
-        <div className="mt-20 border-t border-neutral-800 pt-10">
-          <h3 className="mb-6 text-2xl text-white md:text-3xl">
-            Let’s Connect
-          </h3>
-
-          <p className="mb-8 max-w-2xl text-lg leading-7">
-            Interested in collaborating, discussing new ideas, or exploring
-            potential opportunities where my expertise in frontend engineering,
-            e-commerce optimization, and scalable web applications can add
-            value? Feel free to reach out — I’d love to connect.
-          </p>
-
-          <div className="flex flex-wrap items-center gap-6">
-            <Link
-              href="https://www.linkedin.com/in/enestekin/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 hover:text-white"
-            >
-              LinkedIn
-            </Link>
-            <Link
-              href="https://github.com/enestekin"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 hover:text-white"
-            >
-              GitHub
-            </Link>
-            <Link
-              href="https://twitter.com/tekindotjs"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 hover:text-white"
-            >
-              Twitter
-            </Link>
-          </div>
         </div>
       </div>
     </section>

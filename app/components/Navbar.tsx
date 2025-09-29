@@ -15,17 +15,37 @@ export default function Navbar() {
 
         <div className="hidden md:flex">
           <ul className="flex list-none items-center gap-4">
-            <li className="px-3 py-[19px] font-bold hover:text-white">
-              <Link href="/about">About</Link>
+            <li>
+              <Link
+                href="/about"
+                className="px-3 py-[19px] font-bold hover:text-white"
+              >
+                About
+              </Link>
             </li>
-            <li className="px-3 py-[19px] font-bold hover:text-white">
-              <Link href="/blog">Blog</Link>
+            <li>
+              <Link
+                href="/blog "
+                className="px-3 py-[19px] font-bold hover:text-white"
+              >
+                Blog
+              </Link>
             </li>
-            <li className="px-3 py-[19px] font-bold hover:text-white">
-              <Link href="/uses">Uses</Link>
+            <li>
+              <Link
+                href="/uses"
+                className="px-3 py-[19px] font-bold hover:text-white"
+              >
+                Uses
+              </Link>
             </li>
-            <li className="px-3 py-[19px] font-bold hover:text-white">
-              <Link href="/resume">Resume</Link>
+            <li>
+              <Link
+                href="/resume"
+                className="px-3 py-[19px] font-bold hover:text-white"
+              >
+                Resume
+              </Link>
             </li>
             <li>
               <Link

@@ -3,7 +3,7 @@ export default function AboutPage() {
     <section className="mx-auto max-w-4xl px-4 py-16 text-neutral-400">
       <div>
         <div>
-          <header className="mb-10 font-bold">
+          <header className="mb-10">
             <h1 className="text-3xl text-white md:text-5xl">
               Hey, I&apos;m Enes Tekin
             </h1>

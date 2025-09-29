@@ -24,6 +24,9 @@ export default function Navbar() {
             <li className="px-3 py-[19px] font-bold hover:text-white">
               <Link href="/uses">Uses</Link>
             </li>
+            <li className="px-3 py-[19px] font-bold hover:text-white">
+              <Link href="/resume">Resume</Link>
+            </li>
             <li>
               <Link
                 href="/contact"
@@ -118,6 +121,15 @@ export default function Navbar() {
                   className="border-border-primary block border-b px-3 py-[19px] font-bold hover:text-white"
                 >
                   Uses
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/resume"
+                  onClick={() => setIsOpen(false)}
+                  className="border-border-primary block border-b px-3 py-[19px] font-bold hover:text-white"
+                >
+                  Resume
                 </Link>
               </li>
               <li>

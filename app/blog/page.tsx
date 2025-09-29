@@ -6,7 +6,7 @@ export default function BlogPage() {
 
   return (
     <section className="mx-auto max-w-4xl px-4 py-16">
-      <h2 className="mb-10 text-3xl font-bold text-white md:text-5xl">Blog</h2>
+      <h2 className="mb-10 text-3xl text-white md:text-5xl">Blog</h2>
       <div className="grid gap-8 sm:grid-cols-2">
         {posts.map(({ slug, meta }) => (
           <Link

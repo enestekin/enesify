@@ -4,7 +4,7 @@ export default function ContactPage() {
   return (
     <section className="mx-auto max-w-4xl px-4 py-16 text-neutral-400">
       <div>
-        <header className="mb-10 font-bold">
+        <header className="mb-10">
           <h1 className="text-3xl text-white md:text-5xl">Get in Touch</h1>
         </header>
         <div className="text-lg">
@@ -16,7 +16,12 @@ export default function ContactPage() {
           </p>
           <ul className="mt-5 list-disc space-y-4 pl-5 text-lg">
             <li>
-              Email:
+              <Link
+                href="mailto:zenestekin@gmail.com"
+                className="text-underline hover:text-white"
+              >
+                Mail me!
+              </Link>
               <strong>
                 <i> zenestekin@gmail.com</i>
               </strong>

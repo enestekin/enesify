@@ -5,6 +5,14 @@
   --foreground: #171717;
   --primary: #ff6a33;
   --border-primary: #262626;
+  --yellow: #ffd644;
+  --blue: #4b96ff;
+  --red: #ff4545;
+  --green: #30c85e;
+  --border-yellow: #ffe58f;
+  --border-blue: #4b96ff;
+  --border-red: #ff4545;
+  --border-green: #30c85e;
 }
 
 @theme inline {
@@ -13,7 +21,15 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --color-primary: var(--primary);
+  --color-yellow: var(--yellow);
+  --color-blue: var(--blue);
+  --color-red: var(--red);
+  --color-green: var(--green);
   --color-border-primary: var(--border-primary);
+  --color-border-yellow: var(--border-yellow);
+  --color-border-blue: var(--border-blue);
+  --color-border-red: var(--border-red);
+  --color-border-green: var(--border-green);
 }
 
 @media (prefers-color-scheme: dark) {

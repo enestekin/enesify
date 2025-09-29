@@ -3,7 +3,7 @@ export default function UsesPage() {
     <section className="mx-auto max-w-4xl px-4 py-16">
       <div>
         <header>
-          <div className="mb-30 font-bold">
+          <div className="mb-30">
             <h2 className="text-3xl md:text-5xl">What Enes uses</h2>
             <p className="mt-2 text-2xl text-neutral-400">
               The tools Enes Tekin uses

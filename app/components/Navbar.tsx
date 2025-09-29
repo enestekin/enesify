@@ -1,56 +1,103 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { usePathname } from "next/navigation";
+import { useState, useEffect } from "react";
+
+const navItems = [
+  { name: "About", href: "/about" },
+  { name: "Blog", href: "/blog" },
+  { name: "Uses", href: "/uses" },
+  { name: "Resume", href: "/resume" },
+];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+  }, [isOpen]);
 
   return (
-    <nav className="relative z-50 h-15 border-b border-neutral-800 text-sm font-semibold text-neutral-400">
-      <div className="container flex h-full items-center justify-between">
+    <nav className="relative z-50 border-b border-neutral-800 text-sm font-semibold text-neutral-400">
+      <div className="container flex h-[60px] items-center justify-between">
         <div>
-          <Link href="#">Enes Tekin</Link>
+          <Link href="/">
+            <svg
+              width="50"
+              height="50"
+              viewBox="0 0 200 200"
+              xmlns="http://www.w3.org/2000/svg"
+              className="transition-transform hover:scale-105"
+            >
+              <circle
+                cx="100"
+                cy="100"
+                r="95"
+                fill="#0F172A"
+                stroke="#3B82F6"
+                strokeWidth="2"
+              />
+
+              <path
+                d="M 60 70 L 140 70 L 140 75 L 65 75 L 65 97 L 130 97 L 130 102 L 65 102 L 65 125 L 140 125 L 140 130 L 60 130 Z"
+                fill="#3B82F6"
+              />
+
+              <path
+                d="M 105 70 L 135 70 L 135 75 L 122 75 L 122 130 L 117 130 L 117 75 L 105 75 Z"
+                fill="#60A5FA"
+              />
+
+              <path
+                d="M 45 85 L 50 90 L 45 95 M 155 85 L 150 90 L 155 95"
+                stroke="#3B82F6"
+                strokeWidth="2.5"
+                fill="none"
+                strokeLinecap="round"
+              />
+
+              <path
+                d="M 45 105 L 50 110 L 45 115 M 155 105 L 150 110 L 155 115"
+                stroke="#60A5FA"
+                strokeWidth="2.5"
+                fill="none"
+                strokeLinecap="round"
+              />
+
+              <circle cx="85" cy="145" r="2.5" fill="#3B82F6" />
+              <circle cx="95" cy="145" r="2.5" fill="#60A5FA" />
+              <circle cx="105" cy="145" r="2.5" fill="#3B82F6" />
+              <circle cx="115" cy="145" r="2.5" fill="#60A5FA" />
+            </svg>
+          </Link>
         </div>
 
+        {/* Desktop Menu */}
         <div className="hidden md:flex">
           <ul className="flex list-none items-center gap-4">
-            <li>
-              <Link
-                href="/about"
-                className="px-3 py-[19px] font-bold hover:text-white"
-              >
-                About
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/blog "
-                className="px-3 py-[19px] font-bold hover:text-white"
-              >
-                Blog
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/uses"
-                className="px-3 py-[19px] font-bold hover:text-white"
-              >
-                Uses
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/resume"
-                className="px-3 py-[19px] font-bold hover:text-white"
-              >
-                Resume
-              </Link>
-            </li>
+            {navItems.map((item) => (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  className={`px-3 py-[19px] font-bold transition-colors ${
+                    pathname === item.href ? "text-white" : "hover:text-white"
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
+
             <li>
               <Link
                 href="/contact"
-                className="border-primary text-primary hover:bg-primary inline-flex h-[36px] items-center space-x-1 rounded-md border px-3 py-1 hover:text-black"
+                className="border-primary text-primary hover:bg-primary inline-flex h-10 items-center rounded-md border px-4 transition-colors hover:text-black"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +121,9 @@ export default function Navbar() {
           </ul>
         </div>
 
+        {/* Mobile Button */}
         <button
+          aria-label="Toggle navigation menu"
           className="z-50 text-white md:hidden"
           onClick={() => setIsOpen(!isOpen)}
         >
@@ -112,51 +161,29 @@ export default function Navbar() {
         </button>
       </div>
 
+      {/* Mobile Menu */}
       {isOpen && (
-        <div className="font- fixed inset-x-0 top-[60px] bottom-0 z-10 block max-h-[100vh] bg-neutral-950">
+        <div className="fixed inset-x-0 top-[60px] bottom-0 z-40 bg-neutral-950">
           <div className="max-h-full overflow-y-auto p-5">
-            <ul>
-              <li>
-                <Link
-                  href="/about"
-                  onClick={() => setIsOpen(false)}
-                  className="border-border-primary block border-b px-3 py-[19px] font-bold hover:text-white"
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/blog"
-                  onClick={() => setIsOpen(false)}
-                  className="border-border-primary block border-b px-3 py-[19px] font-bold hover:text-white"
-                >
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/uses"
-                  onClick={() => setIsOpen(false)}
-                  className="border-border-primary block border-b px-3 py-[19px] font-bold hover:text-white"
-                >
-                  Uses
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/resume"
-                  onClick={() => setIsOpen(false)}
-                  className="border-border-primary block border-b px-3 py-[19px] font-bold hover:text-white"
-                >
-                  Resume
-                </Link>
-              </li>
+            <ul className="space-y-2">
+              {navItems.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    onClick={() => setIsOpen(false)}
+                    className={`border-border-primary block border-b px-3 py-4 font-bold transition-colors ${
+                      pathname === item.href ? "text-white" : "hover:text-white"
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
               <li>
                 <Link
                   href="/contact"
                   onClick={() => setIsOpen(false)}
-                  className="text-primary hover:bg-primary my-[19px] flex h-[48px] items-center justify-center rounded-md border px-3 px-4 py-2 hover:text-black"
+                  className="text-primary hover:bg-primary mt-4 flex h-12 items-center justify-center rounded-md border px-4 transition-colors hover:text-black"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -168,7 +195,6 @@ export default function Navbar() {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="lucide lucide-hand-icon lucide-hand"
                   >
                     <path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2" />
                     <path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2" />

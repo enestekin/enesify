@@ -50,3 +50,17 @@ body {
   margin: 0 auto;
   padding: 0 1.25rem;
 }
+
+.prose pre {
+  margin: 2rem 0;
+}
+
+.prose code {
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  background-color: rgb(38 38 38);
+}
+
+.prose blockquote {
+  @apply my-8 rounded-md border-l-4 border-gray-500 bg-gray-500/20 p-4 text-neutral-300 not-italic;
+}

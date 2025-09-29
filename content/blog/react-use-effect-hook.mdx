@@ -1,0 +1,90 @@
+---
+title: "Understanding React useEffect: A Complete Guide"
+date: "2024-03-15"
+readingTime: "5 min read"
+summary: "Learn how React's useEffect hook works, its parameter structure, and different usage scenarios with practical examples."
+tags: ["React", "Hooks", "JavaScript", "useEffect"]
+---
+
+# Understanding React useEffect: A Complete Guide
+
+The useEffect function takes **2 parameters**. The first one is a function. This function runs every time the page is **rendered** or **updated**. To see how the function works, let's simply print "Effect rendered":
+
+```jsx
+import { useEffect } from 'react';
+
+function App() {
+  useEffect(() => {
+    console.log("Effect Rendered");
+  });
+
+  return Hello World;
+}
+```
+
+**Output:**
+
+> `Effect Rendered`
+
+## How Does It Work When The Page Updates?
+
+useEffect takes an array as the second parameter, and when the values inside this array change (get updated), the useEffect function runs. Let's set up a state structure to update the page. That's why I'm including useState as well.
+
+```jsx
+import { useEffect, useState } from 'react';
+
+function App() {
+  const [name, setName] = useState("Enes");
+
+  useEffect(() => {
+    console.log("Name changed");
+  }, [name]);
+
+  return (
+
+      Hello {name}
+      <button onClick={() => setName("Eren")}>Change Name
+
+  );
+}
+```
+
+We have a button that updates "name" to "Eren" when clicked. We added the "name" value inside the array. Every time this "name" value is updated, it runs our first parameter (the function), which prints "Name changed".
+
+**Output:**
+
+```
+(2) Name changed
+```
+
+## Why Did We Get "Name Changed" Twice?
+
+You might wonder why we got the "Name Changed" output 2 times when we only updated "name" once by clicking the button. Because first, we get the "Name changed" output when our page is rendered, and second, when the "name" changes.
+
+## What Happens If We Don't Provide The Second Parameter?
+
+```jsx
+useEffect(() => {
+  console.log("Name changed");
+});
+```
+
+When we click the button, we'll still get the "Name changed" output 2 times. "But we didn't send a parameter, why?" I can hear you say. Because first, we get our "Name changed" output when the page is rendered, and when we click the button, since our state's status has changed, the page will render again and we'll get the "Name changed" output once more.
+
+## What If We Pass An Empty Array?
+
+```jsx
+useEffect(() => {
+  console.log("Effect rendered");
+}, []);
+```
+
+If we don't add parameters to the array, since there's no value to be updated, it will only run when the page is rendered.
+
+## Summary
+
+- **No dependency array**: Runs on every render
+- **Empty dependency array `[]`**: Runs only once on mount
+- **Array with dependencies `[name, age]`**: Runs when any dependency changes
+
+Understanding useEffect is crucial for managing side effects in React applications. Use it wisely to optimize your component's performance and behavior.

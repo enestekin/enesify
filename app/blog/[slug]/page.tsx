@@ -44,7 +44,7 @@ export default async function PostPage(props: {
         </div>
       </header>
 
-      <article className="mx-auto max-w-4xl px-4 py-12 leading-7">
+      <article className="mx-auto max-w-4xl px-4 py-12">
         <div className="prose prose-invert prose-lg max-w-none">{content}</div>
       </article>
     </div>

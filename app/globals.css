@@ -64,3 +64,7 @@ body {
 .prose blockquote {
   @apply my-8 rounded-md border-l-4 border-gray-500 bg-gray-500/20 p-4 text-neutral-300 not-italic;
 }
+
+.prose p {
+  margin: 1rem 0;
+}

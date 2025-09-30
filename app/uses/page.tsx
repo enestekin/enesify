@@ -16,7 +16,6 @@ export default function UsesPage() {
         </p>
       </header>
 
-      {/* Tech */}
       <section aria-labelledby="tech-heading" className="mb-16">
         <h2
           id="tech-heading"
@@ -50,7 +49,6 @@ export default function UsesPage() {
         </ul>
       </section>
 
-      {/* Desk Setup */}
       <section aria-labelledby="desk-setup-heading" className="mb-16">
         <h2
           id="desk-setup-heading"
@@ -73,7 +71,6 @@ export default function UsesPage() {
         </ul>
       </section>
 
-      {/* Performance & Monitoring */}
       <section aria-labelledby="performance-heading" className="mb-16">
         <h2
           id="performance-heading"

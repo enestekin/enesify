@@ -1,0 +1,413 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Resume matches snapshot 1`] = `
+<div>
+  <main
+    class="mx-auto max-w-4xl px-4 py-16 text-neutral-400"
+  >
+    <header
+      class="mb-10"
+    >
+      <h1
+        class="text-3xl text-white md:text-5xl"
+      >
+        Resume
+      </h1>
+      <div
+        class="my-8 rounded-md border-l-4 p-4 border-blue bg-blue/20 text-blue"
+      >
+        <p>
+          You can also
+           
+          <a
+            class="underline"
+            href="/enestekin.pdf"
+            target="_blank"
+          >
+            download my CV as PDF
+          </a>
+          .
+        </p>
+      </div>
+    </header>
+    <section
+      aria-labelledby="experience-heading"
+      class="mb-16"
+    >
+      <h2
+        class="mb-6 text-2xl font-semibold text-white"
+        id="experience-heading"
+      >
+        Professional Experience
+      </h2>
+      <div
+        class="space-y-12"
+      >
+        <article>
+          <h3
+            class="font-bold text-white"
+          >
+            Akinon
+          </h3>
+          <p
+            class="text-white"
+          >
+            <i>
+              Front End Developer | 
+              <time
+                datetime="2024-09"
+              >
+                Sep 2024
+              </time>
+               –
+               
+              <time
+                datetime="2024-12"
+              >
+                Dec 2024
+              </time>
+            </i>
+          </p>
+          <ul
+            class="mt-4 list-disc space-y-2 pl-4 text-neutral-400"
+          >
+            <li>
+              Designed and implemented scalable e-commerce websites using Omnitron Headless CMS.
+            </li>
+            <li>
+              Improved performance and responsiveness, achieving a 12% increase in interaction metrics.
+            </li>
+            <li>
+              Delivered complete solutions from design to deployment.
+            </li>
+            <li>
+              Built landing pages, category listing pages, product detail pages, and checkout flows.
+            </li>
+            <li>
+              Stack: React.js, Next.js, Redux, TypeScript, TailwindCSS
+            </li>
+          </ul>
+        </article>
+        <article>
+          <h3
+            class="font-bold text-white"
+          >
+            Trive
+          </h3>
+          <p
+            class="text-white"
+          >
+            <i>
+              Front End Developer | 
+              <time
+                datetime="2023-11"
+              >
+                Nov 2023
+              </time>
+               –
+               
+              <time
+                datetime="2024-01"
+              >
+                Jan 2024
+              </time>
+            </i>
+          </p>
+          <ul
+            class="mt-4 list-disc space-y-2 pl-4 text-neutral-400"
+          >
+            <li>
+              Debugged and resolved application issues using VSCode and browser dev tools.
+            </li>
+            <li>
+              Refactored legacy components, reducing load times by 15%.
+            </li>
+            <li>
+              Collaborated with analysts and backend developers to deliver new features.
+            </li>
+            <li>
+              Stack: React.js, Styled Components, Redux-Saga, TypeScript, Semantic UI React
+            </li>
+          </ul>
+        </article>
+        <article>
+          <h3
+            class="font-bold text-white"
+          >
+            Denebunu
+          </h3>
+          <p
+            class="text-white"
+          >
+            <i>
+              Front End Developer | 
+              <time
+                datetime="2022-12"
+              >
+                Dec 2022
+              </time>
+               –
+               
+              <time
+                datetime="2023-11"
+              >
+                Nov 2023
+              </time>
+            </i>
+          </p>
+          <ul
+            class="mt-4 list-disc space-y-2 pl-4 text-neutral-400"
+          >
+            <li>
+              Led development of “Sorbunu”, a research platform with an admin dashboard.
+            </li>
+            <li>
+              Built interactive chart components for survey data visualization.
+            </li>
+            <li>
+              Integrated iyzico payments and enabled CSV/Excel exports.
+            </li>
+            <li>
+              Migrated Redux-Thunk to Redux-Saga, reducing complexity by 20%.
+            </li>
+            <li>
+              Implemented Sentry monitoring, cutting error response time by 30%.
+            </li>
+            <li>
+              Stack: React.js, Next.js, TailwindCSS, Redux-Saga, Axios, HeadlessUI, i18n
+            </li>
+          </ul>
+        </article>
+      </div>
+    </section>
+    <section
+      aria-labelledby="education-heading"
+    >
+      <h2
+        class="mb-6 text-2xl font-semibold text-white"
+        id="education-heading"
+      >
+        Education
+      </h2>
+      <article>
+        <h3
+          class="text-xl font-medium text-white"
+        >
+          B.Sc. in Computer Science
+        </h3>
+        <p
+          class="text-sm text-neutral-500"
+        >
+          Çanakkale Onsekiz Mart University
+        </p>
+      </article>
+    </section>
+  </main>
+</div>
+`;
+
+exports[`ResumePage matches snapshot 1`] = `
+<div>
+  <main
+    class="mx-auto max-w-4xl px-4 py-16 text-neutral-400"
+  >
+    <header
+      class="mb-10"
+    >
+      <h1
+        class="text-3xl text-white md:text-5xl"
+      >
+        Resume
+      </h1>
+      <div
+        class="my-8 rounded-md border-l-4 p-4 border-blue bg-blue/20 text-blue"
+      >
+        <p>
+          You can also
+           
+          <a
+            class="underline"
+            href="/enestekin.pdf"
+            target="_blank"
+          >
+            download my CV as PDF
+          </a>
+          .
+        </p>
+      </div>
+    </header>
+    <section
+      aria-labelledby="experience-heading"
+      class="mb-16"
+    >
+      <h2
+        class="mb-6 text-2xl font-semibold text-white"
+        id="experience-heading"
+      >
+        Professional Experience
+      </h2>
+      <div
+        class="space-y-12"
+      >
+        <article>
+          <h3
+            class="font-bold text-white"
+          >
+            Akinon
+          </h3>
+          <p
+            class="text-white"
+          >
+            <i>
+              Front End Developer | 
+              <time
+                datetime="2024-09"
+              >
+                Sep 2024
+              </time>
+               –
+               
+              <time
+                datetime="2024-12"
+              >
+                Dec 2024
+              </time>
+            </i>
+          </p>
+          <ul
+            class="mt-4 list-disc space-y-2 pl-4 text-neutral-400"
+          >
+            <li>
+              Designed and implemented scalable e-commerce websites using Omnitron Headless CMS.
+            </li>
+            <li>
+              Improved performance and responsiveness, achieving a 12% increase in interaction metrics.
+            </li>
+            <li>
+              Delivered complete solutions from design to deployment.
+            </li>
+            <li>
+              Built landing pages, category listing pages, product detail pages, and checkout flows.
+            </li>
+            <li>
+              Stack: React.js, Next.js, Redux, TypeScript, TailwindCSS
+            </li>
+          </ul>
+        </article>
+        <article>
+          <h3
+            class="font-bold text-white"
+          >
+            Trive
+          </h3>
+          <p
+            class="text-white"
+          >
+            <i>
+              Front End Developer | 
+              <time
+                datetime="2023-11"
+              >
+                Nov 2023
+              </time>
+               –
+               
+              <time
+                datetime="2024-01"
+              >
+                Jan 2024
+              </time>
+            </i>
+          </p>
+          <ul
+            class="mt-4 list-disc space-y-2 pl-4 text-neutral-400"
+          >
+            <li>
+              Debugged and resolved application issues using VSCode and browser dev tools.
+            </li>
+            <li>
+              Refactored legacy components, reducing load times by 15%.
+            </li>
+            <li>
+              Collaborated with analysts and backend developers to deliver new features.
+            </li>
+            <li>
+              Stack: React.js, Styled Components, Redux-Saga, TypeScript, Semantic UI React
+            </li>
+          </ul>
+        </article>
+        <article>
+          <h3
+            class="font-bold text-white"
+          >
+            Denebunu
+          </h3>
+          <p
+            class="text-white"
+          >
+            <i>
+              Front End Developer | 
+              <time
+                datetime="2022-12"
+              >
+                Dec 2022
+              </time>
+               –
+               
+              <time
+                datetime="2023-11"
+              >
+                Nov 2023
+              </time>
+            </i>
+          </p>
+          <ul
+            class="mt-4 list-disc space-y-2 pl-4 text-neutral-400"
+          >
+            <li>
+              Led development of “Sorbunu”, a research platform with an admin dashboard.
+            </li>
+            <li>
+              Built interactive chart components for survey data visualization.
+            </li>
+            <li>
+              Integrated iyzico payments and enabled CSV/Excel exports.
+            </li>
+            <li>
+              Migrated Redux-Thunk to Redux-Saga, reducing complexity by 20%.
+            </li>
+            <li>
+              Implemented Sentry monitoring, cutting error response time by 30%.
+            </li>
+            <li>
+              Stack: React.js, Next.js, TailwindCSS, Redux-Saga, Axios, HeadlessUI, i18n
+            </li>
+          </ul>
+        </article>
+      </div>
+    </section>
+    <section
+      aria-labelledby="education-heading"
+    >
+      <h2
+        class="mb-6 text-2xl font-semibold text-white"
+        id="education-heading"
+      >
+        Education
+      </h2>
+      <article>
+        <h3
+          class="text-xl font-medium text-white"
+        >
+          B.Sc. in Computer Science
+        </h3>
+        <p
+          class="text-sm text-neutral-500"
+        >
+          Çanakkale Onsekiz Mart University
+        </p>
+      </article>
+    </section>
+  </main>
+</div>
+`;

@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`About Page matches snapshot 1`] = `
+<div>
+  <main
+    class="mx-auto max-w-4xl px-4 py-16 text-neutral-400"
+  >
+    <header
+      class="mb-10"
+    >
+      <h1
+        class="text-3xl text-white md:text-5xl"
+      >
+        Hey, I'm Enes Tekin
+      </h1>
+      <h2
+        class="mt-2 text-2xl text-neutral-400"
+      >
+        Software Engineer
+      </h2>
+    </header>
+    <section
+      aria-labelledby="about-heading"
+      class="space-y-5 text-lg"
+    >
+      <h2
+        class="sr-only"
+        id="about-heading"
+      >
+        About Me
+      </h2>
+      <p
+        class="leading-7"
+      >
+        I'm a Software Engineer focused on
+         
+        <strong
+          class="text-white"
+        >
+          JavaScript
+        </strong>
+         and
+        <strong
+          class="text-white"
+        >
+           web development
+        </strong>
+        , passionate about building modern, scalable, and user-focused web applications. I enjoy crafting clean, performant UIs and solving complex problems with simple, elegant solutions.
+      </p>
+      <p
+        class="leading-7"
+      >
+        I graduated with a
+         
+        <strong
+          class="text-white"
+        >
+          B.Sc. in Computer Sciences
+        </strong>
+         
+        from Canakkale Onsekiz Mart University. Since then, I’ve worked with multiple companies like Akinon, Trive, and Denebunu, focusing on e-commerce platforms, dashboards, and interactive user experiences.
+      </p>
+      <p
+        class="leading-7"
+      >
+        My main stack includes
+         
+        <strong
+          class="text-white"
+        >
+          React.js, Next.js, TypeScript, and TailwindCSS
+        </strong>
+        , but I also have experience with
+         
+        <strong
+          class="text-white"
+        >
+          Node.js, Express.js, MongoDB, SQL
+        </strong>
+        , and 
+        <strong
+          class="text-white"
+        >
+          GraphQL
+        </strong>
+         on the backend. In the past, I’ve worked with technologies like jQuery, Bootstrap, and SCSS, which gave me a strong foundation for writing maintainable code today.
+      </p>
+      <p
+        class="leading-7"
+      >
+        Beyond coding, I’m constantly exploring new tools, testing best practices, and improving my skills in both frontend and fullstack development.
+      </p>
+    </section>
+    <section
+      aria-labelledby="what-i-do-heading"
+      class="mt-10"
+    >
+      <h2
+        class="text-2xl text-white md:text-3xl"
+        id="what-i-do-heading"
+      >
+        What I Do
+      </h2>
+      <div
+        class="space-y-8 pt-5 text-lg leading-7"
+      >
+        <article>
+          <h3
+            class="font-semibold text-white"
+          >
+            Frontend Engineering & Scalable Applications
+          </h3>
+          <p>
+            I build scalable, maintainable, and high-performing frontend applications with React, Next.js, and TypeScript. My focus is on creating user interfaces that balance clean design, accessibility, and technical robustness, ensuring products can grow alongside business needs.
+          </p>
+        </article>
+        <article>
+          <h3
+            class="font-semibold text-white"
+          >
+            E-Commerce & Performance Optimization
+          </h3>
+          <p>
+            With strong experience in e-commerce platforms, I specialize in optimizing checkout flows, product detail pages, and customer journeys. I work on improving performance metrics, SEO, and conversion rates, enabling businesses to reach wider audiences with faster and more reliable web experiences.
+          </p>
+        </article>
+        <article>
+          <h3
+            class="font-semibold text-white"
+          >
+            Collaboration & Technical Leadership
+          </h3>
+          <p>
+            I thrive in collaborative environments, partnering with designers, backend developers, and product teams to deliver end-to-end solutions. I bring expertise in state management, testing, and CI/CD pipelines, and contribute to building engineering practices that raise overall code quality and team efficiency.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+</div>
+`;

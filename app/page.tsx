@@ -39,7 +39,6 @@ export default function Home() {
           </p>
         </header>
 
-        {/* CTA */}
         <div className="mt-14 flex flex-col items-center justify-center gap-6 text-lg font-semibold md:flex-row md:gap-10">
           <Link
             href="/contact"

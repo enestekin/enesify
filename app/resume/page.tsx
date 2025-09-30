@@ -47,7 +47,6 @@ export default function ResumePage() {
         </Note>
       </header>
 
-      {/* Professional Experience */}
       <section aria-labelledby="experience-heading" className="mb-16">
         <h2
           id="experience-heading"
@@ -56,7 +55,6 @@ export default function ResumePage() {
           Professional Experience
         </h2>
         <div className="space-y-12">
-          {/* Akinon */}
           <article>
             <h3 className="font-bold text-white">Akinon</h3>
             <p className="text-white">
@@ -83,7 +81,6 @@ export default function ResumePage() {
             </ul>
           </article>
 
-          {/* Trive */}
           <article>
             <h3 className="font-bold text-white">Trive</h3>
             <p className="text-white">
@@ -109,7 +106,6 @@ export default function ResumePage() {
             </ul>
           </article>
 
-          {/* Denebunu */}
           <article>
             <h3 className="font-bold text-white">Denebunu</h3>
             <p className="text-white">
@@ -141,12 +137,9 @@ export default function ResumePage() {
               </li>
             </ul>
           </article>
-
-          {/* ... Diğer iş deneyimlerini de aynı formatta bırakabiliriz */}
         </div>
       </section>
 
-      {/* Education */}
       <section aria-labelledby="education-heading">
         <h2
           id="education-heading"

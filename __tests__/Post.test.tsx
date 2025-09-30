@@ -18,7 +18,7 @@ describe("PostPage", () => {
       content: <p>This is mock content</p>,
     });
 
-    render(await PostPage({ params: { slug: "test-post" } }));
+    render(await PostPage({ params: Promise.resolve({ slug: "test-post" }) }));
 
     expect(
       screen.getByRole("heading", { name: /Test Post/i }),

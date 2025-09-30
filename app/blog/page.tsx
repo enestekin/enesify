@@ -14,7 +14,7 @@ export default function BlogPage() {
       </header>
 
       <div className="space-y-6">
-        {posts.map(({ slug, meta }, index) => (
+        {posts.map(({ slug, meta }) => (
           <Link
             key={slug}
             href={`/blog/${slug}`}

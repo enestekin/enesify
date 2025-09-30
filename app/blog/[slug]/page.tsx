@@ -1,11 +1,20 @@
-import { getPostBySlug } from "@/lib/mdx";
+import { getPostBySlug, getAllPosts } from "@/lib/mdx";
 import Link from "next/link";
 import "highlight.js/styles/tokyo-night-dark.css";
 
-export default async function PostPage(props: {
-  params: Promise<{ slug: string }>;
+export async function generateStaticParams() {
+  const posts = getAllPosts();
+  return posts.map((post) => ({
+    slug: post.slug,
+  }));
+}
+
+export default async function PostPage({
+  params,
+}: {
+  params: { slug: string };
 }) {
-  const { slug } = await props.params;
+  const { slug } = params;
   const { content, meta } = await getPostBySlug(slug);
 
   return (
@@ -13,7 +22,7 @@ export default async function PostPage(props: {
       <div className="mx-auto max-w-4xl px-4 py-16">
         <Link
           href="/blog"
-          className="group inline-flex items-center gap-2 font-bold text-neutral-300 transition-colors hover:text-white"
+          className="text-bold group inline-flex items-center gap-2 font-bold"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -25,7 +34,7 @@ export default async function PostPage(props: {
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="transition-transform duration-200 group-hover:-translate-x-1"
+            className="transition-transform group-hover:-translate-x-1"
           >
             <path d="m15 18-6-6 6-6" />
           </svg>
@@ -44,7 +53,7 @@ export default async function PostPage(props: {
         </div>
       </header>
 
-      <article className="mx-auto max-w-4xl px-4 py-12">
+      <article className="mx-auto max-w-4xl px-4 py-12 leading-7">
         <div className="prose prose-invert prose-lg max-w-none">{content}</div>
       </article>
     </div>

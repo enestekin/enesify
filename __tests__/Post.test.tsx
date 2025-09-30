@@ -3,7 +3,6 @@ import PostPage from "@/app/blog/[slug]/page";
 
 jest.mock("../lib/mdx", () => ({
   getPostBySlug: jest.fn(),
-  getAllPosts: jest.fn(),
 }));
 
 import { getPostBySlug } from "@/lib/mdx";

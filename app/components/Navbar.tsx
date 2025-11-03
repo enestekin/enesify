@@ -29,51 +29,49 @@ export default function Navbar() {
         <div>
           <Link href="/">
             <svg
-              width="50"
-              height="50"
               viewBox="0 0 200 200"
+              width="70"
+              height="70"
               xmlns="http://www.w3.org/2000/svg"
-              className="transition-transform hover:scale-105"
             >
-              <circle
-                cx="100"
-                cy="100"
-                r="95"
-                fill="#0F172A"
-                stroke="#3B82F6"
-                strokeWidth="2"
+              <defs>
+                <linearGradient
+                  id="logoGradient"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                >
+                  <stop
+                    offset="0%"
+                    style={{ stopColor: "#ffffff", stopOpacity: 1 }}
+                  />
+                  <stop
+                    offset="100%"
+                    style={{ stopColor: "#ffffff", stopOpacity: 0.7 }}
+                  />
+                </linearGradient>
+              </defs>
+
+              <path
+                d="M 70 60 L 70 140 L 130 140 L 130 125 L 85 125 L 85 107 L 120 107 L 120 93 L 85 93 L 85 75 L 130 75 L 130 60 Z"
+                fill="url(#logoGradient)"
               />
 
               <path
-                d="M 60 70 L 140 70 L 140 75 L 65 75 L 65 97 L 130 97 L 130 102 L 65 102 L 65 125 L 140 125 L 140 130 L 60 130 Z"
-                fill="#3B82F6"
+                d="M 95 50 L 145 50 L 145 65 L 127 65 L 127 130 L 112 130 L 112 65 L 95 65 Z"
+                fill="white"
+                opacity="0.9"
               />
 
-              <path
-                d="M 105 70 L 135 70 L 135 75 L 122 75 L 122 130 L 117 130 L 117 75 L 105 75 Z"
-                fill="#60A5FA"
+              <rect
+                x="70"
+                y="145"
+                width="75"
+                height="3"
+                fill="white"
+                opacity="0.5"
               />
-
-              <path
-                d="M 45 85 L 50 90 L 45 95 M 155 85 L 150 90 L 155 95"
-                stroke="#3B82F6"
-                strokeWidth="2.5"
-                fill="none"
-                strokeLinecap="round"
-              />
-
-              <path
-                d="M 45 105 L 50 110 L 45 115 M 155 105 L 150 110 L 155 115"
-                stroke="#60A5FA"
-                strokeWidth="2.5"
-                fill="none"
-                strokeLinecap="round"
-              />
-
-              <circle cx="85" cy="145" r="2.5" fill="#3B82F6" />
-              <circle cx="95" cy="145" r="2.5" fill="#60A5FA" />
-              <circle cx="105" cy="145" r="2.5" fill="#3B82F6" />
-              <circle cx="115" cy="145" r="2.5" fill="#60A5FA" />
             </svg>
           </Link>
         </div>
